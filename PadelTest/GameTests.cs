@@ -42,15 +42,6 @@ namespace PadelTest
 
         }
 
-        [Fact]
-        public void Game_Player2IsNull()
-        {
-            var player1 = new Player("Erik");
-            var player2 = new Player("Isak");
-
-            var game = new Game(player1, null);
-            Assert.Null(game._player2);
-        }
 
         [Fact]
         public void Game_Player1AndPlayer2_CorectlySet()
@@ -64,7 +55,10 @@ namespace PadelTest
 
         }
 
-        
+
+     
+
+
         [Fact]
         public void Point_AddPointToPlayer1()
         {
@@ -213,7 +207,7 @@ namespace PadelTest
         }
         
         [Fact]
-        public void ScoreString_BothPlayer4Points_GameNotOver()
+        public void ScoreString_BothPlayerHave4Points_GameNotOver()
         {
             var player1 = new Player("Erik");
             player1.Score._Score = 4;

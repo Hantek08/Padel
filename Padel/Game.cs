@@ -22,9 +22,8 @@ namespace Padel
 
         public void Point(Player player)
         {
-           // _player1.Point(); //it only increase player1's point by one everytime Point is invoked,
-           player.Point();  
-            
+            // _player1.Point(); //it only increase player1's point by one everytime Point is invoked
+            player.Point();
 
         }
         /// <summary>
@@ -42,16 +41,17 @@ namespace Padel
 
         /// <summary>
         /// Added another conditon that returns "The game is not over yet", when players score are less than 4 or same score. 
+        /// satt gresen til 6 ettersom det er maks om begge har 4 poeng. 
         /// </summary>
         /// <returns></returns>
 
         public string ScoreString()
         {
-           if (_player1.Score._Score > 6 || _player2.Score._Score > 6)
+            if (_player1.Score._Score > 6 || _player2.Score._Score > 6)
             {
                 throw new ArgumentOutOfRangeException();
             }
-            else if(_player1.Score._Score >= 4 && _player1.Score._Score > _player2.Score._Score)                     
+            else if (_player1.Score._Score >= 4 && _player1.Score._Score > _player2.Score._Score)
             {
                 return "Player 1 wins";
             }

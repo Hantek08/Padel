@@ -7,7 +7,17 @@ namespace PadelTest
 {
    public class ScoreTests
     {
-       [Fact]
+        [Fact]
+        public void Score_ZeroScoreAtFirst()
+        {
+            var score = new Score();
+
+            Assert.Equal(0, score._Score);
+
+
+        }
+
+        [Fact]
        public void Increase_ShouldIncreaseByOne()
         {
             var score = new Score();
